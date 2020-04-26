@@ -19,12 +19,12 @@ public class CommentAppController {
 	@Autowired
 	private CommentsRepository commentsRepository;
 
-	@PostMapping("/savecomment")
+	@PostMapping("/saveComment")
 	public Comment saveComment(@Valid @RequestBody Comment comment) {
 		return commentsRepository.save(comment);
 	}
 
-	@GetMapping("/getcomments")
+	@GetMapping("/getComments")
 	public List<Comment> getComments() {
 		return commentsRepository.findAll();
 	}
